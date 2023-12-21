@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Logo/Egglog.png" type="img/x-icon" />
+    <title>ITLog</title>
+</head>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<body>
+    
+     <nav>
+         <div class="logo">
+            <img class="log" src="Logo/Egglog.png"> 
+             <h3>IT<span>Log</span></h3>
+         </div>
+
+         <a href="index.html">
+             <button>HOME</button>
+             <button id="menuButton"></button>
+         </a>
+
+     </nav>
+
+    <form id="myForm">
+        <h1>Contact Us</h1>
+        <div class="info">
+            <input id="fname" class="fname" type="text" name="name" placeholder="Full name" required>
+            <input id="email" type="text" name="email" placeholder="Email" required>
+            <p>Message</p>
+            <textarea rows="4" id="message" required></textarea>
+        
+            <button class="buot" type="submit">Submit</button>
+        </div>
+    </form>
+    <script>
+        (function(){
+            emailjs.init("H1J5Zf7lE0n6hdrYD");
+        })();
+
+
+        document.getElementById('myForm').onsubmit = function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            sendEmail();
+        };
+
+        function sendEmail() {
+            const fname = document.getElementById('fname').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            let emailContent = {
+                Name: fname,
+                Email: email,
+                Message: message
+            };
+
+            var serviceID = "service_mmr6t6m";
+            var templateID = "template_l9o0s0p";
+
+            emailjs.send(serviceID, templateID, emailContent)
+            .then(res => {
+                alert("Email Sent Successfully!");
+                location.reload();
+            });
+        }
+    </script>
+</body>
+</html>
