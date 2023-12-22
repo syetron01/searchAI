@@ -36,14 +36,9 @@ span{
     color: wheat;
 }
 
-/* #logo{
+#logo{
     font-size: 100px;
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: black;
-    margin-top: -60px;
-    margin-bottom: -20px;
-    text-shadow: 0 0 5px #ffffff;
-} */
+}
 
 .devel{
     color: #000000;
