@@ -2,6 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebas
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
 import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
 
+//Please don't hack this, I did this on purpose for my own learnings on other stuffs...
 const firebaseConfig = {
     apiKey: "AIzaSyAwMlqQ63_8YLE7Gm-HTeFxGjA8WMRkT10",
     authDomain: "searchai-a4b8d.firebaseapp.com",
